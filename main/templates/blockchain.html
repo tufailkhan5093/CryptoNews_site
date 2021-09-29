@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<!-- index-3.html 02:57  -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Blockchain</title>
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	{% include 'links.html' %}
+
+</head>
+
+<body class="home-3">
+
+	<!-- START PRELOADER -->
+	<!-- <div id="page-preloader">
+		<div class="theme-loader">Bitfonix</div>
+	</div> -->
+	<!-- END PRELOADER --> 
+	
+	<!-- START HEADER SECTION -->
+	{% include 'header.html' %}
+	
+
+    <!-- START BLOG SECTION -->
+	<section id="bloght" class="section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<div class="section-title">
+						<h5>latest news</h5>
+						<h3 class="mt-4">Blogs About <span>Prices</span></h3>
+					</div>
+				</div>
+			</div>
+			<!-- end section title -->
+			<div class="row">
+
+			
+				{% for b in blog %}
+
+				<div class="col-lg-4 col-md-4 col-12 mb-lg-0 mb-md-4 mb-sm-4 mb-4">
+					<div class="single-blogh" style="background-color: rgb(246, 246, 246);">
+						<div class="single-blog-himage">
+							<img class="img-fluid" src="{{b.image.url}}" alt="">
+						</div>
+						<div class="single-blog-hdec">
+							<a href="#"><h5>{{b.title}}</h5></a>
+							<span class="post-date"><i class="icofont icofont-calendar"></i> {{b.time}}</span>
+							
+							<p>
+								{{b.desc}}
+								<a href="{% url 'blockchain_blog' b.id %}">Read More</a>
+							</p>
+							<div class="single-blog-hadmin">
+								<div class="single-blog-hadmin-img">
+									<img class="img-fluid rounded-circle" src="assets/img/team/person1.jpg" alt="">
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+				<!-- end single blog -->
+			
+				<!-- end single blog -->
+				
+				<!-- end single blog -->
+			</div>
+			<!-- end row-->
+		</div>
+	</section>
+    <!-- END BLOG SECTION -->
+
+    <!-- START FOOTER -->
+	{% include 'footer.html' %}
+    <!-- END FOOTER -->
+	
+	<!-- Latest jQuery -->
+   {% include 'script.html' %}
+</body>
+
+
+<!-- index-3.html 04:54  -->
+</html>

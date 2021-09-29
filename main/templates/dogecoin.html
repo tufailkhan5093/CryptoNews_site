@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+
+<html lang="zxx">
+  {% load static %}
+  <!-- about.html 04:54  -->
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/favicon.ico"
+    />
+    <title>CryptoOmen - Bitcoin And Crypto Currency HTML Template</title>
+    <!-- Bootstrap core CSS -->
+    {% include 'links.html' %}
+  </head>
+
+  <body>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'roboto', sans-serif;
+    background-color: #F2F2F2
+}
+
+
+
+
+
+h1 {
+    text-align: center;
+    color: #333333
+}
+
+.cardcontainer {
+    width: 350px;
+    height: 550px;
+    background-color: rgb(255, 255, 255);
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.3s
+}
+
+.cardcontainer:hover {
+    box-shadow: 0 0 45px gray
+}
+
+.photo {
+    height: 300px;
+    width: 100%
+}
+
+.photo img {
+    height: 100%;
+    width: 100%
+}
+
+.txt1 {
+    margin: auto;
+    text-align: center;
+    font-size: 17px
+}
+
+.content {
+    width: 80%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -33px
+}
+
+.photos {
+    width: 90px;
+    height: 30px;
+    background-color: #E74C3C;
+    color: white;
+    position: relative;
+    top: -30px;
+    padding-left: 10px;
+    font-size: 20px
+}
+
+.txt4 {
+    font-size: 27px;
+    position: relative;
+    top: 33px
+}
+
+.txt5 {
+    position: relative;
+    top: 18px;
+    color: #E74C3C;
+    font-size: 23px
+}
+
+.txt2 {
+    position: relative;
+    top: 10px
+}
+
+.cardcontainer:hover>.photo {
+    height: 200px;
+    animation: move1 0.5s ease both
+}
+
+@keyframes move1 {
+    0% {
+        height: 300px
+    }
+
+    100% {
+        height: 200px
+    }
+}
+
+.cardcontainer:hover>.content {
+    height: 200px
+}
+
+.footer {
+    width: 80%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    position: relative;
+    top: -15px
+}
+
+.btn {
+    position: relative;
+    top: 20px
+}
+
+#heart {
+    cursor: pointer
+}
+
+.like {
+    float: right;
+    font-size: 22px;
+    position: relative;
+    top: 20px;
+    color: #333333
+}
+
+.fa-gratipay {
+    margin-right: 10px;
+    transition: 0.5s
+}
+
+.fa-gratipay:hover {
+    color: #E74C3C
+}
+
+.txt3 {
+    color: gray;
+    position: relative;
+    top: 18px;
+    font-size: 14px
+}
+
+.comments {
+    float: right;
+    cursor: pointer
+}
+
+.fa-clock,
+.fa-comments {
+    margin-right: 7px
+}
+</style>
+	
+	  
+    <!-- START PRELOADER -->
+    <!-- <div id="page-preloader">
+		<div class="theme-loader">Bitfonix</div>
+	</div> -->
+    <!-- END PRELOADER -->
+    {% include 'header.html' %}
+
+
+
+
+
+    <!-- START PAGE BANNER AND BREADCRUMBS -->
+    <section id="slider-section">
+      <div style="background-color: rgb(240, 100, 0);" class="single-page-title-area overlay" data-background="{% static 'images/bg/slide6.jpg' %}">
+        <div class="auto-container" >
+          <div class="row">
+            <div class="col-12 text-center">
+              <div class="single-page-title">
+                <h2>About DogeCoin</h2>
+                <p>Dogecoin is a cryptocurrency created by software engineers Billy Markus and Jackson Palmer, who decided to create a payment system as a joke, making fun of the wild speculation in cryptocurrencies at the time. Despite its satirical nature, some consider it a legitimate investment prospect.</p>
+              </div>
+            </div>
+          </div>
+          <!-- end row-->
+        </div>
+      </div>
+          <!-- end row-->
+        </div>
+      </div>
+          <!-- end row-->
+        </div>
+      </div>
+      <div class="single-page-title-area-bottom">
+        <div class="auto-container">
+          <div class="row">
+            <div class="col-12 text-center">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">{{coin.name}}</li>
+              </ol>
+            </div>
+          </div>
+          <!-- end row-->
+        </div>
+      </div>
+    </section>
+    <!-- END PAGE BANNER AND BREADCRUMBS -->
+
+    <!-- START ABOUT PROMO SECTION -->
+    <div id="aboutpromo" class="section-padding">
+      <div class="auto-container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="section-title">
+              <h5>latest news</h5>
+              <h3 class="mt-4">Blogs About <span>Dogecoin</span></h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 80px;">
+          {% for b in blog %}
+
+          <div class="col-lg-4 col-md-4 col-12 mb-lg-0 mb-md-4 mb-sm-4 mb-4">
+            <div class="single-blogh">
+              <div class="single-blog-himage">
+                <img class="img-fluid" src="{{b.image.url}}" alt="">
+              </div>
+              <div class="single-blog-hdec bg-white">
+                <a href="#"><h5>{{b.title}}</h5></a>
+                <span class="post-date"><i class="icofont icofont-calendar"></i> {{b.time}}</span>
+                
+                <p>
+                  {{b.desc}}
+                  <a href="{% url 'dogecoin_blog' b.id %}">Read More</a>
+                </p>
+                <div class="single-blog-hadmin">
+                  <div class="single-blog-hadmin-img">
+                    <img class="img-fluid rounded-circle" src="assets/img/team/person1.jpg" alt="">
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+         
+        
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12 mb-lg-0 mb-md-0 mb-5">
+            <div class="blockquote-wrapper">
+              <span class="blockquote-line"></span>
+              <blockquote class="blockquote">
+                <p>
+                  <i class="icofont icofont-quote-left"></i> Some of the
+                  limitations that cryptocurrencies presently face – such as the
+                  fact that one’s digital fortune can be erased by a computer
+                  crash, or that a virtual vault may be ransacked by a hacker –
+                  may be overcome in time through technological advances.
+                  <i class="icofont icofont-quote-right"></i>
+                </p>
+                <!-- <footer class="blockquote-footer">
+                  Jone Doe, <cite title="Source Title">Florida, USA</cite>
+                </footer> -->
+              </blockquote>
+              <div class="single-blog-hadmin">
+                <div class="single-blog-hadmin-img">
+                  <img
+                    class="img-fluid rounded-circle"
+                    src="assets/img/team/person2.jpg"
+                    alt=""
+                  />
+                </div>
+                <!-- <div class="single-blog-hadmin-info">
+                  <p>Hash Theme</p>
+                  <span>Web Development</span>
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+
+        
+
+       
+          <!-- end col -->
+          <div class="col-lg-8 col-md-8 col-12 pl-lg-5">
+            <div class="image-style-2-wrapper">
+              <div class="image-style-2-inner">
+                <div class="image-one">
+                  <img
+                    src="{% static 'images/bg/slide3.jpg' %}"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="image-two">
+                  <div class="image-two-logo">
+                    <img
+                      class="img-fluid"
+                      src="assets/img/clients/4.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="image-two-des">
+                    <p>
+                      Sed ut perspiciatis unde omnis iste natus error sit
+                      voluptatem accusantium doloremque laudantium, totam rem
+                      aperiam, eaque ipsa quae ab illodrut inventore veritatis
+                      et quasi architecto beatae vitae dicta sunt.
+                    </p>
+                  </div>
+                  <div class="image-two-rem text-right">
+                    <a href="#"
+                      ><i class="icofont icofont-long-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end col -->
+        </div>
+      </div>
+      <!--- END CONTAINER -->
+    </div>
+    <!-- END ABOUT PROMO SECTION -->
+
+    <!-- START CHOOSE US SECTION
+    <section id="chhoseus" class="section-padding bg-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="section-title">
+              <h5>Bitcoin Legality</h5>
+              <h3>Why Choose <span>Bitfonix</span></h3>
+            </div>
+          </div>
+        </div>
+        <!-- end section title -->
+        <!-- <div class="row">
+          <div class="col-lg-4 col-md-4 col-12 mb-5">
+            <div class="single-wcus">
+              <div class="single-wcus-icon">
+                <i class="icofont icofont-bill"></i>
+              </div>
+              <div class="single-wcus-text">
+                <h5>Easy Trading</h5>
+                <p>
+                  Lorem ipsum dolor sit ametelid consectetur adipiscing elit
+                  sedd eiusmod tempor.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end single chooseus -->
+          <!-- <div class="col-lg-4 col-md-4 col-12 mb-5">
+            <div class="single-wcus">
+              <div class="single-wcus-icon">
+                <i class="icofont icofont-coins"></i>
+              </div>
+              <div class="single-wcus-text">
+                <h5>Trading Strategy</h5>
+                <p>
+                  Lorem ipsum dolor sit ametelid consectetur adipiscing elit
+                  sedd eiusmod tempor.
+                </p>
+              </div>
+            </div>
+          </div> -->
+          <!-- end single chooseus -->
+          <!-- <div class="col-lg-4 col-md-4 col-12 mb-lg-0 mb-md-0 mb-5">
+            <div class="single-wcus">
+              <div class="single-wcus-icon">
+                <i class="icofont icofont-money"></i>
+              </div>
+              <div class="single-wcus-text">
+                <h5>Money Exchange</h5>
+                <p>
+                  Lorem ipsum dolor sit ametelid consectetur adipiscing elit
+                  sedd eiusmod tempor.
+                </p>
+              </div>
+            </div>
+          </div> -->
+          <!-- end single chooseus -->
+          <!-- <div class="col-lg-4 col-md-4 col-12 mb-lg-0 mb-md-0 mb-5">
+            <div class="single-wcus">
+              <div class="single-wcus-icon">
+                <i class="icofont icofont-ui-travel"></i>
+              </div>
+              <div class="single-wcus-text">
+                <h5>Security Ensure</h5>
+                <p>
+                  Lorem ipsum dolor sit ametelid consectetur adipiscing elit
+                  sedd eiusmod tempor.
+                </p>
+              </div>
+            </div>
+          </div> -->
+          <!-- end single chooseus -->
+          <!-- <div class="col-lg-4 col-md-4 col-12 mb-lg-0 mb-md-0 mb-5">
+            <div class="single-wcus">
+              <div class="single-wcus-icon">
+                <i class="icofont icofont-money-bag"></i>
+              </div>
+              <div class="single-wcus-text">
+                <h5>Cryptocurrency Trading</h5>
+                <p>
+                  Lorem ipsum dolor sit ametelid consectetur adipiscing elit
+                  sedd eiusmod tempor.
+                </p>
+              </div>
+            </div>
+          </div> -->
+          <!-- end single chooseus -->
+          <!-- <div class="col-lg-4 col-md-4 col-12">
+            <div class="single-wcus">
+              <div class="single-wcus-icon">
+                <i class="icofont icofont-briefcase"></i>
+              </div>
+              <div class="single-wcus-text">
+                <h5>Bitcoin Legality</h5>
+                <p>
+                  Lorem ipsum dolor sit ametelid consectetur adipiscing elit
+                  sedd eiusmod tempor.
+                </p>
+              </div>
+            </div>
+          </div> -->
+          <!-- end single chooseus -->
+        <!-- </div>
+      </div> -->
+      <!--- END CONTAINER -->
+    <!-- </section> --> -->
+    <!-- END CHOOSE US SECTION -->
+
+    <!-- START COUNTER SECTION -->
+    <!-- <section
+      id="counter"
+      class="section-padding overlay counter-section section-back-image-2"
+      data-background="assets/img/bg/counterbg2.jpg"
+    >
+      <div class="container">
+        <div class="row text-center counter-wrapper">
+          <div class="col-lg-8 mx-auto">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-12 counter-wrapper-inner">
+                <div class="single-counter">
+                  <h3 class="timer">56</h3>
+                  <p>Bitcoin</p>
+                </div>
+              </div>
+    
+    <!-- END PROMO SECTION -->
+
+    <!-- START PRICETABLE SECTION -->
+    <section id="pricetable" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="section-title">
+              <h5>BitCoin conversation</h5>
+              <h3>Trade Bitcoin <span>With Us</span></h3>
+            </div>
+          </div>
+        </div>
+        <!-- end section title -->
+        <div class="row">
+          <div
+            class="
+              col-lg-6 col-md-6 col-12
+              pr-lg-5 pr-md-5 pr-sm-0 pr-0
+              mb-lg-0 mb-md-4 mb-sm-4 mb-4
+            "
+          >
+            <div class="table-responsive">
+              <table class="bitland-table bitland-table-2 table">
+                <thead>
+                  <tr>
+                    <th scope="col">Cryptocurrency</th>
+                    <th scope="col">Price (in USD)</th>
+                    <th scope="col">Supppy</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <i class="icofont icofont-cur-baht"></i>BitCoin
+                    </th>
+                    <td>{{rates}}</td>
+                    <td>{{supply}} BTC</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <i class="icofont icofont-cur-dollar"></i> Dogecoin
+                    </th>
+                    <td>{{doge}}</td>
+                    <td>{{dogecoin}} BTC</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <i class="icofont icofont-cur-euro-true"></i> Ethereum
+                    </th>
+                    <td>{{etc1}}</td>
+                    <td>{{etc}} BTC</td>
+                  </tr>
+                  
+                  <tr>
+                    <th scope="row">
+                      <i class="icofont icofont-cur-dollar-plus"></i> Stellar
+                    </th>
+                    <td>{{xlm1}}</td>
+                    <td>{{xlm}} BTC</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <i class="icofont icofont-cur-renminbi-true"></i> Ripple
+                    </th>
+                    <td>{{xrp1}}</td>
+                    <td>{{xrp}} BTC</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- end col -->
+          <div class="col-lg-6 col-md-6 col-12">
+            <div class="cal-convertor">
+              <script>
+                baseUrl = "https://widgets.cryptocompare.com/";
+                var scripts = document.getElementsByTagName("script");
+                var embedder = scripts[scripts.length - 1];
+                (function () {
+                  var appName = encodeURIComponent(window.location.hostname);
+                  if (appName == "") {
+                    appName = "local";
+                  }
+                  var s = document.createElement("script");
+                  s.type = "text/javascript";
+                  s.async = true;
+                  var theUrl =
+                    baseUrl + "serve/v1/coin/chart?fsym=BTC&tsym=USD";
+                  s.src =
+                    theUrl +
+                    (theUrl.indexOf("?") >= 0 ? "&" : "?") +
+                    "app=" +
+                    appName;
+                  embedder.parentNode.appendChild(s);
+                })();
+              </script>
+            </div>
+          </div>
+          <!-- end col -->
+        </div>
+      </div>
+      <!--- END CONTAINER -->
+    </section>
+    <!-- END PRICETABLE SECTION -->
+
+    <!-- START TEAM SECTION -->
+    
+
+
+
+        </div>
+        <!-- end row -->
+      </div>
+      <!--- END CONTAINER -->
+    </section>
+    <!-- END TEAM SECTION -->
+
+    <!-- START CALLTOACTION SECTION -->
+    <section
+      id="calltoaction"
+      class="calltoaction-padding section-padding bg-theme"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="calltoaction-two-wrap mb-4">
+              <h4 class="text-uppercase">Need More Service?</h4>
+             
+            </div>
+            <a href="#" class="wow fadeInDown btn-style btn-border btn-border-3"
+              >Contact Us <i class="icofont icofont-hand-right"></i
+            ></a>
+          </div>
+          <!-- end col -->
+          <!-- end col -->
+        </div>
+        <!-- end row-->
+      </div>
+    </section>
+
+ 
+    <!-- END CALLTOACTION SECTION -->
+
+    <!-- START TESTIMONIAL SECTION -->
+    <section id="testimonial" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="section-title">
+              
+              <h3>Doge <span>Converer</span></h3>
+            </div>
+          </div>
+        </div>
+        <!-- end section title -->
+        
+          <section id="counter" style="background-color: rgb(133, 27, 27)" class="section-padding section-back-image overlay" data-background="{% static 'images/bg/processbg.jpg' %}">
+            <div class="container">
+                <div class="row">	 
+                    <div class="col-lg-6 col-md-6 col-12 mb-lg-0 mb-md-4 mb-sm-4 mb-4">
+                        <div class="calltoaction-two-wrap mb-4">
+                            <h4 class="text-uppercase mb-4">Doge Converter</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo.
+                            </p>
+                        </div>
+                    </div>
+                    <!--- END COL -->	 
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="cal-convertor">
+                            <script>
+                            baseUrl = "https://widgets.cryptocompare.com/";
+                            var scripts = document.getElementsByTagName("script");
+                            var embedder = scripts[ scripts.length - 1 ];
+                            var cccTheme = {"General":{"background":"","borderColor":"","headerText":""},"Form":{"inputBackground":"#fff","borderColor":"","labelColor":"#fff","inputColor":"#333","labelFrom":"Put Amount","labelTo":"Get Amount"}};
+                            (function (){
+                            var appName = encodeURIComponent(window.location.hostname);
+                            if(appName==""){appName="local";}
+                            var s = document.createElement("script");
+                            s.type = "text/javascript";
+                            s.async = true;
+                            var theUrl = baseUrl+'serve/v1/coin/converter?fsym=DOGE&tsyms=USD,EUR,CNY,GBP';
+                            s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+                            embedder.parentNode.appendChild(s);
+                            })();
+                            </script>
+                        </div>
+                       
+                    </div>
+                    <!--- END COL -->
+                </div>
+            </div>
+            <!--- END CONTAINER -->
+        </section>
+       
+      </div>
+      <!--- END CONTAINER -->
+    </section>
+    <!-- END TESTIMONIAL SECTION -->
+
+    <!-- START CLIENT SECTION -->
+    <div id="client" class="client-section-padding bg-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="client-slider owl-carousel owl-theme">
+              <div class="single-client">
+                <a href="#"
+                  ><img class="img-fluid" src="assets/img/clients/1.png" alt=""
+                /></a>
+              </div>
+              <div class="single-client">
+                <a href="#"
+                  ><img class="img-fluid" src="assets/img/clients/5.png" alt=""
+                /></a>
+              </div>
+              <div class="single-client">
+                <a href="#"
+                  ><img class="img-fluid" src="assets/img/clients/3.png" alt=""
+                /></a>
+              </div>
+              <div class="single-client">
+                <a href="#"
+                  ><img class="img-fluid" src="assets/img/clients/2.png" alt=""
+                /></a>
+              </div>
+              <div class="single-client">
+                <a href="#"
+                  ><img class="img-fluid" src="assets/img/clients/4.png" alt=""
+                /></a>
+              </div>
+              <div class="single-client">
+                <a href="#"
+                  ><img class="img-fluid" src="assets/img/clients/6.png" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--- END CONTAINER -->
+    </div>
+    <!-- END CLIENT SECTION -->
+
+    <!-- START FOOTER -->
+    {% include 'footer.html' %}
+    <!-- END FOOTER -->
+
+    <!-- Latest jQuery -->
+   {% include 'script.html' %}
+    <script>
+      $(document).ready(function(){
+document.getElementById("heart").onclick = function(){
+document.querySelector(".fa-gratipay").style.color = "#E74C3C";
+};
+});
+    </script>
+  </body>
+
+  <!-- about.html 04:54  -->
+</html>

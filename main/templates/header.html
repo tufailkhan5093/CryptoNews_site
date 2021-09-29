@@ -1,0 +1,124 @@
+{% load static %}
+<script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+<coingecko-coin-price-marquee-widget  coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd" background-color="#ffffff" locale="en"></coingecko-coin-price-marquee-widget>
+<header class="main-header header-1">
+    <!-- START TOP AREA -->
+    <div class="top-area">
+        <div class="auto-container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 col-sm-12 col-12">
+                    <div class="info-menu">
+                        <ul>
+                            <li><a href="#"><i class="icofont icofont-time"></i> Opening Hours - Mon to Sat: 9AM to 5PM</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                    <div class="info-menu">
+                        <ul>
+                            <li><a href="#"><i class="icofont icofont-login"></i> Login </a></li>
+                            <li><a href="#"><i class="icofont icofont-user-alt-5"></i> Register </a></li>
+                            <li><a href="#"><i class="icofont icofont-hand-drag2"></i> Help </a></li>
+                            <li><a href="#"><i class="icofont icofont-live-support"></i> Support </a></li>
+                        </ul>
+                    </div>
+                </div> 
+                <!-- end col -->
+            </div>
+        </div>
+    </div>
+    <!-- END TOP AREA -->
+
+    <!-- START LOGO AREA -->
+    <div class="logo-area">
+        <div class="auto-container">
+            <div class="row">
+                <div class="col-lg-5 col-md-3 col-sm-6 col-7 mx-auto pl-0 mb-lg-0 mb-5">
+                    <div class="logo">
+                        <a href="index-2.html">
+                           <img class="img-fluid" src="{% static 'css/images/logo.jpeg' %}" width="200px" alt="">
+                        </a>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-7 col-md-12 col-sm-12 col-12">
+                    <div class="header-info-box">
+                        <div class="header-info-icon">
+                            <i class="fa fa-envelope-open"></i>
+                            
+                        </div>
+                        <p>Email Us</p>
+                        <h6>admin@cryptoomen.com</h6>
+                    </div>
+                    <div class="header-info-box">
+                        <div class="header-info-icon">
+                            <i class="fas fa-phone-square-alt"></i>
+                        </div>
+                        <p>Call Us</p>
+                        <h6>123-456-0975</h6>
+                    </div>
+                    <div class="header-info-box">
+                       
+                    </div>
+                </div>
+                <!-- end col -->
+            </div>
+        </div>
+    </div>
+    <!-- END LOGO AREA -->
+
+    <!-- START NAVIGATION AREA -->
+    <div class="sticky-menu">
+        <div class="mainmenu-area">
+            <div class="auto-container">
+                <div class="row">
+                    <div class="col-lg-9 d-none d-lg-block d-md-none">
+                        <nav class="navbar navbar-expand-lg justify-content-left">
+                            <ul class="navbar-nav">
+                               <li class=""><a href="/" class="active nav-link">Home</a>
+                                 
+                                </li>
+                                <li class="dropdown"><a class="nav-link" href="#">Coins</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{% url 'bitcoin' %}">BitCoin</a></li>
+                                        <li><a href="{% url 'dogecoin' %}">DogeCoin</a></li>
+                                        <li><a href="{% url 'ethereum' %}">Ethereum</a></li>
+                                        <li><a href="{% url 'ripple' %}">Ripple</a></li>
+                                        <li><a href="{% url 'dogecoin' %}">Others</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                <li class=""><a href="{% url 'buy_sell' %}" class="nav-link">Buy/Sell</a>
+                                   
+                                </li>
+                                <li class=""><a href="{% url 'mining' %}" class="nav-link">Mining</a>
+                                
+                                </li>
+                                <li class=""><a href="{% url 'pricing' %}" class="nav-link">Prices</a>
+                                   
+                                </li>
+                                <li class=""><a href="{% url 'blockchain' %}" class="nav-link">BlockChain</a>
+        
+                                </li>
+                                <li><a href="{% url 'guide' %}" class="nav-link">Guide</a></li>
+                                <li><a href="{% url 'convertor' %}" class="nav-link">Converter</a></li>
+                                <li><a href="contact.html" class="nav-link">Shop</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3 d-none d-lg-block d-md-none text-right pr-0">
+                        <form class="navbar-form">
+                            <div class="form-group">
+                                <input class="form-control" name="search" value="Search here..." type="text">
+                                <button type="submit" class="btn"><i class="fa fa-search-plus"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END NAVIGATION AREA -->	
+</header>
+<!-- END HEADER SECTION -->

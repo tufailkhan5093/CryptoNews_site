@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zxx">
+	{% load static %}
+
+
+<!-- service.html 04:55  -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
+	<title>Mining</title>
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    {% include 'links.html' %}
+</head>
+
+<body>
+
+	<!-- START PRELOADER -->
+	
+	<!-- END PRELOADER --> 
+	
+	<!-- START HEADER SECTION -->
+{% include 'header.html' %}
+	<!-- END HEADER SECTION -->
+	
+	<!-- START PAGE BANNER AND BREADCRUMBS -->
+	<section id="page-banner" style="background-color: rgb(190, 8, 8);">
+		<div class="single-page-title-area overlay" data-background="{% static 'images/bg/slide1.jpg' %}">
+			<div class="auto-container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<div class="single-page-title">
+							<h2>Bitfonix Services</h2>
+							<p>Lorem ipsum dolor sit amet</p>
+						</div>
+					</div>
+				</div>
+				<!-- end row-->
+			</div>
+		</div>
+		<div class="single-page-title-area-bottom">
+			<div class="auto-container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="#">Home</a></li>
+							<li class="breadcrumb-item active">Mining</li>
+						</ol>
+					</div>
+				</div>
+				<!-- end row-->
+			</div>
+		</div>
+	</section>
+	<!-- END PAGE BANNER AND BREADCRUMBS -->
+	
+	<!-- START SERVCIE SECTION -->
+    <section id="service" class="section-padding">
+        <div class="container">	 
+			<div class="row">
+				
+				{% for b in blog %}
+
+				<div class="col-lg-4 col-md-4 col-12 mb-lg-0 mb-md-4 mb-sm-4 mb-4">
+					<div class="single-blogh">
+						<div class="single-blog-himage">
+							<img class="img-fluid" src="{{b.image.url}}" alt="">
+						</div>
+						<div class="single-blog-hdec">
+							<a href="#"><h5>{{b.title}}</h5></a>
+							<span class="post-date"><i class="icofont icofont-calendar"></i> {{b.time}}</span>
+							
+							<p>
+								{{b.desc}}
+								<a href="{% url 'mining_blog' b.id %}">Read More</a>
+							</p>
+							<div class="single-blog-hadmin">
+								<div class="single-blog-hadmin-img">
+									<img class="img-fluid rounded-circle" src="assets/img/team/person1.jpg" alt="">
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+				<!-- end col -->
+			
+			
+				<!-- end col -->
+			
+				<!-- end col -->
+				
+				<!-- end col -->	
+			</div>
+			<!-- end row -->
+        </div>
+        <!--- END CONTAINER -->
+    </section>
+    <!-- END SERVICE SECTION -->
+	
+	<!-- START CALLTOACTION SECTION -->
+	<section id="calltoaction" class="calltoaction-padding section-padding bg-theme">
+		<div class="auto-container">
+			<div class="row">
+				<div class="col-lg-8 col-md-8 col-sm-12 col-12 mb-lg-0 mb-md-4 mb-sm-4 mb-4">
+					<div class="calltoaction-two-wrap">
+						<h4>Need More Service?</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do<br>incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</div>
+				<!-- end col -->
+				<div class="col-lg-4 col-md-4 col-sm-12 col-12 mt-lg-4 mt-md-4 text-lg-right text-md-right text-sm-left text-left">
+					<a href="#" class="btn-style btn-border btn-border-3">Contact Us</a>
+				</div>
+				<!-- end col -->
+			</div>
+			<!-- end row-->
+		</div>
+	</section>
+    <!-- END CALLTOACTION SECTION -->
+	
+    <!-- START FOOTER -->
+   {% include 'footer.html' %}
+    <!-- END FOOTER -->
+	
+	<!-- Latest jQuery -->
+   {% include 'script.html' %}
+</body>
+
+
+<!-- service.html 04:55  -->
+</html>

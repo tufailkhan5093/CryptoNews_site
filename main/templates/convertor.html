@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zxx">
+{% load static %}
+
+
+<!-- index-3.html 02:57  -->
+<head>
+    <meta charset="utf-8">
+    <title>convertor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	{% include 'links.html' %}
+</head>
+
+<body class="home-3">
+   <style>
+       @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem
+}
+
+body {
+    background-color: #f3f3f3
+}
+
+#starred {
+    box-shadow: 3px 3px 10px #b5b5b5
+}
+
+.table div.text-muted {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    margin-top: 0.3rem
+}
+
+.icons {
+    object-fit: contain;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%
+}
+
+.graph img {
+    object-fit: contain;
+    width: 40px;
+    height: 50px;
+    transform: scale(2) rotateY(45deg)
+}
+
+.graph .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    position: absolute;
+    background-color: blue;
+    box-shadow: 1px 1px 1px #a5a5a5;
+    top: 25px
+}
+
+.graph .dot:after {
+    background-color: #fff;
+    content: '$9,999.00';
+    font-weight: 600;
+    font-size: 0.7rem;
+    position: absolute;
+    top: -25px;
+    left: -20px;
+    box-shadow: 1px 1px 2px #a5a5a5;
+    border-radius: 2px
+}
+
+.font-weight-bold {
+    font-size: 1.3rem
+}
+
+#ethereum {
+    transform: scale(2) rotateY(45deg) rotateX(180deg)
+}
+
+#ripple {
+    transform: scale(2) rotateY(10deg) rotateX(20deg)
+}
+
+#eos {
+    transform: scale(2) rotateY(50deg) rotateX(190deg)
+}
+
+.table tr td {
+    border: none
+}
+
+.red {
+    color: #ff2f2f;
+    font-weight: 700
+}
+
+.green {
+    color: #1cbb1c;
+    font-weight: 700
+}
+
+.labels,
+.graph {
+    position: relative
+}
+
+.green-label {
+    background-color: #00b300;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.7rem
+}
+
+.orange-label {
+    background-color: #ffa500;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.7rem
+}
+
+.border-right {
+    transform: scale(0.6);
+    border-right: 1px solid black !important
+}
+
+.box {
+    transform: scale(1.5);
+    background-color: #dbe2ff
+}
+
+#top .table tbody tr {
+    border-bottom: 1px solid #ddd
+}
+
+#top .table tbody tr:last-child {
+    border: none
+}
+
+select {
+    background-color: inherit;
+    padding: 8px;
+    border-radius: 5px;
+    color: #444;
+    border: 1px solid #444;
+    outline-color: #00f
+}
+
+.text-white {
+    background-color: rgb(43, 159, 226);
+    border-radius: 50%;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 3px
+}
+
+a:hover {
+    text-decoration: none
+}
+
+a:hover .text-white {
+    background-color: rgb(20, 92, 187)
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 4px
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #999, #777);
+    border-radius: 10px
+}
+
+@media(max-width:379px) {
+    .d-lg-flex .h3 {
+        font-size: 1.4rem
+    }
+}
+
+@media(max-width:352px) {
+    #plat {
+        margin-top: 10px
+    }
+}
+   </style>
+
+	<!-- START PRELOADER -->
+	<!-- <div id="page-preloader">
+		<div class="theme-loader">Bitfonix</div>
+	</div> -->
+	<!-- END PRELOADER --> 
+	
+	<!-- START HEADER SECTION -->
+	{% include 'header.html' %}
+	<!-- END HEADER SECTION -->
+	
+	<!-- START SLIDER SECTION -->
+	
+	<!-- END SLIDER SECTION  -->
+
+	<!-- START SERVICE SECTION -->
+
+    <!-- END SERVICE SECTION -->	
+
+	<!-- START ABOUT PROMO SECTION -->
+   
+    <!-- END ABOUT PROMO SECTION -->	
+	
+	<!-- START PRICER SECTION -->
+
+    <!-- END PRICER SECTION -->
+
+    <!-- START CHOOSE US SECTION -->
+
+    <!-- END CHOOSE US SECTION -->
+    
+    <!-- START MARKET NEWS SECTION -->
+	
+    <!-- END MARKET NEWS SECTION -->
+
+    <!-- START TESTIMONIAL SECTION -->
+
+    <!-- END TESTIMONIAL SECTION -->
+
+	<!-- START CALLTOACTION SECTION -->
+
+    <!-- END CALLTOACTION SECTION -->
+
+    <!-- START BLOG SECTION -->
+	<section id="bloght" class="section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<div class="section-title">
+						<h5>latest news</h5>
+						<h3 class="mt-4">Blogs About <span>Prices</span></h3>
+					</div>
+				</div>
+			</div>
+
+           
+
+            
+            <section id="counter" class="section-padding section-back-image overlay" data-background="{% static 'images/bg/processbg.jpg' %}">
+                <div class="container">
+                    <div class="row">	 
+                        <div class="col-lg-6 col-md-6 col-12 mb-lg-0 mb-md-4 mb-sm-4 mb-4">
+                            <div class="calltoaction-two-wrap mb-4">
+                                <h4 class="text-uppercase mb-4">BitCoin Converter</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo.
+                                </p>
+                            </div>
+                        </div>
+                        <!--- END COL -->	 
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="cal-convertor">
+                                <script>
+                                baseUrl = "https://widgets.cryptocompare.com/";
+                                var scripts = document.getElementsByTagName("script");
+                                var embedder = scripts[ scripts.length - 1 ];
+                                var cccTheme = {"General":{"background":"","borderColor":"","headerText":""},"Form":{"inputBackground":"#fff","borderColor":"","labelColor":"#fff","inputColor":"#333","labelFrom":"Put Amount","labelTo":"Get Amount"}};
+                                (function (){
+                                var appName = encodeURIComponent(window.location.hostname);
+                                if(appName==""){appName="local";}
+                                var s = document.createElement("script");
+                                s.type = "text/javascript";
+                                s.async = true;
+                                var theUrl = baseUrl+'serve/v1/coin/converter?fsym=BTC&tsyms=USD,EUR,CNY,GBP';
+                                s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+                                embedder.parentNode.appendChild(s);
+                                })();
+                                </script>
+                            </div>
+                          
+                        </div>
+                        <!--- END COL -->
+                    </div>
+                </div>
+                <!--- END CONTAINER -->
+            </section>
+
+
+          
+
+           
+			<!-- end section title -->
+		
+				<!-- end single blog -->
+			
+				<!-- end single blog -->
+				
+				<!-- end single blog -->
+			
+			<!-- end row-->
+		</div>
+	</section>
+  
+
+    <div class="" style="height:669px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F; padding: 0px; margin: 0px; width: 100%;"><div style="height:649px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=light&cnt=10&pref_coin_id=1505&graph=yes" width="100%" height="645px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px">Cryptocurrency Prices</a>&nbsp;by Coinlib</div></div>
+
+    <!-- START FOOTER -->
+	{% include 'footer.html' %}
+    <!-- END FOOTER -->
+	
+	<!-- Latest jQuery -->
+   {% include 'script.html' %}
+</body>
+
+
+<!-- index-3.html 04:54  -->
+</html>

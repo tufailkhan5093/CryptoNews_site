@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zxx">
+	{% load static %}
+
+
+<!-- blog.html 05:27  -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+   
+	<title>Cryptocurrency</title>
+	{% include 'links.html' %}
+</head>
+
+<body>
+
+	<!-- START PRELOADER -->
+	
+	<!-- END PRELOADER --> 
+	
+	<!-- START HEADER SECTION -->
+	{% include 'header.html' %}
+	<!-- END HEADER SECTION -->
+	
+	<!-- START PAGE BANNER AND BREADCRUMBS -->
+	<section id="page-banner">
+		<div class="single-page-title-area overlay" data-background="{% static 'images/bg/slide1.jpg' %}">
+			<div class="auto-container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<div class="single-page-title">
+							<h2>Latest Post</h2>
+							<p>Lorem ipsum dolor sit amet</p>
+						</div>
+					</div>
+				</div>
+				<!-- end row-->
+			</div>
+		</div>
+		<div class="single-page-title-area-bottom">
+			<div class="auto-container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="#">Home</a></li>
+							<li class="breadcrumb-item active">Ripple</li>
+						</ol>
+					</div>
+				</div>
+				<!-- end row-->
+			</div>
+		</div>
+	</section>
+	<!-- END PAGE BANNER AND BREADCRUMBS -->
+	
+	<!-- START BLOG SECTION -->
+    <section id="blog" class="section-padding">
+        <div class="container">	 
+			<div class="row">
+				<div class="col-lg-8 col-md-8 col-12">
+
+
+					{% for b in blog %}
+					<div class="single-blog mb-5 wow fadeInUp animated">
+						<div class="single-blog-slider owl-carousel owl-theme">
+							<div class="single-blog-slider-item">
+								<img class="img-fluid" src="{{b.image.url}}" alt="">
+							</div>
+							<div class="single-blog-slider-item">
+								<img class="img-fluid" src="assets/img/blog/1.jpg" alt="">
+							</div>
+							<div class="single-blog-slider-item">
+								<img class="img-fluid" src="assets/img/blog/3.jpg" alt="">
+							</div>
+						</div>
+						<div class="single-blog-dec">
+							<a href="#"><h4>{{b.title}}</h4></a>
+							<span class="post-date"><i class="icofont icofont-calendar"></i>{{b.time}}</span>
+							<span class="post-comment"><i class="far fa-comment"></i> 3 comments</span>
+							<span class="allpost-cata"><i class="icofont icofont-ui-tag"></i>currency, exchange</span>
+							<p>
+								{{b.desc}}
+								<a href="{% url 'ripple_blog' b.id %}">[...]</a>
+							</p>
+							<div class="single-blog-admin">
+								<div class="single-blog-admin-img">
+									<img class="img-fluid rounded-circle" src="assets/img/team/person1.jpg" alt="">
+								</div>
+								<div class="single-blog-admin-info">
+									<!-- <p>By: <span>Jon Doe</span>for <span>TRADING</span></p> -->
+								</div>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+					<!-- end single blog -->
+		
+					<!-- end single blog -->
+				
+					<!-- end single blog -->
+					
+					<!-- end single blog -->
+					
+					<!-- end single blog -->
+					
+					<!-- end single blog -->
+					
+					<div class="theme-pagination mb-lg-0 mb-md-0 mb-5">
+						<div class="navbar justify-content-center">
+						  <ul class="pagination">
+							<li class="page-item"><a class="page-link" href="#"><i class="icofont icofont-long-arrow-left"></i></a></li>
+							<li class="page-item"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item active"><a class="page-link" href="#">3</a></li>
+							<li class="page-item"><a class="page-link" href="#">4</a></li>
+							<li class="page-item"><a class="page-link" href="#">. . .</a></li>
+							<li class="page-item"><a class="page-link" href="#"><i class="icofont icofont-long-arrow-right"></i></a></li>
+						  </ul>
+						</div>
+					</div>
+					<!-- end blog pagination -->
+				</div>
+				<!-- end col -->
+				<div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-lg-0 mb-md-0 mb-5 pl-lg-5 pl-md-5 pl-sm-2 pl-2">
+					<div class="widget ser_wid mb-5">
+						<div class="widget-inner">
+							<form class="col-12 navbar-form">
+								<div class="row">
+								<div class="form-group col-lg-10 col-md-10 col-10 p-0">
+									<input class="form-control" name="search" value="Search here..." type="text">
+								</div>
+								<div class="form-group col-lg-2 col-md-2 col-2 p-0">
+									<button type="submit" class="btn"><i class="icofont icofont-search"></i></button>
+								</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- end widget -->
+					<div class="widget cat_wid mb-5">
+						<h3 class="widget-title">Recent Post</h3>
+						<!-- end widget tittle-->
+						<div class="widget-inner mt-5">
+							{% for r in recent %}
+							<div class="blog-singleRecpost">
+								<img src="{{r.image.url}}" alt="" class="img-fluid">
+								<h6 class="blog-recTitle">
+									<a href="#">{{r.title}}</a>
+								</h6>
+								<p class="posted-on">{{r.time}}</p>
+							</div>
+							{% endfor %}
+							
+							
+						</div>
+					</div>
+					<!-- end widget -->
+					<div class="widget cat_wid mb-5">
+						<h3 class="widget-title">Category List</h3>
+						<!-- end widget tittle-->
+						<div class="widget-inner mt-5">
+							<div class="category-menu">
+								<ul>
+									{% for c in cat %}
+									<li><a href="#">{{c.name}}<span class="float-right"></span></a></li>
+									
+									{% endfor %}
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- end widget -->	
+					<div class="widget liv_wid mb-5">
+						<h3 class="widget-title">Currency Calculater</h3>
+						<!-- end widget tittle-->
+						<div class="widget-inner mt-5">
+							<div class="cal-convertor">
+								<script>
+									baseUrl = "https://widgets.cryptocompare.com/";
+									var scripts = document.getElementsByTagName("script");
+									var embedder = scripts[ scripts.length - 1 ];
+									var cccTheme = {"General":{"borderColor":"#f7921a","headerText":""},"Form":{"labelFrom":"Put amount:","labelTo":"Get amount:"}};
+									(function (){
+									var appName = encodeURIComponent(window.location.hostname);
+									if(appName==""){appName="local";}
+									var s = document.createElement("script");
+									s.type = "text/javascript";
+									s.async = true;
+									var theUrl = baseUrl+'serve/v1/coin/converter?fsym=XRT&tsyms=USD,EUR,CNY,GBP';
+									s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+									embedder.parentNode.appendChild(s);
+									})();
+								</script>
+							</div>
+							
+						</div>
+					</div>
+					<!-- end widget -->	
+					<div class="widget tag_wid">
+						<h3 class="widget-title">Tag List</h3>
+						<!-- end widget tittle-->
+						<div class="widget-inner mt-5">
+							<div class="tag-list">
+								<ul>
+									<li><a href="#">Bitcoin <span>4</span></a></li>
+									<li><a href="#">Trading <span>3</span></a></li>
+									<li><a href="#">Coin <span>5</span></a></li>
+									<li><a href="#">Buy <span>2</span></a></li>
+									<li><a href="#">Seller <span>7</span></a></li>
+									<li><a href="#">Currency <span>4</span></a></li>
+									<li><a href="#">Ethereum  <span>1</span></a></li>
+									<li><a href="#">Cryptocurrency <span>2</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- end widget -->
+				</div>
+				<!-- end col -->
+			</div>
+			<!-- end row -->
+        </div>
+        <!--- END CONTAINER -->
+    </section>
+    <!-- END BLOG SECTION -->
+	
+    <!-- START FOOTER -->
+   {% include 'footer.html' %}
+    <!-- END FOOTER -->
+	
+	<!-- Latest jQuery -->
+  {% include 'script.html' %}
+</body>
+
+
+<!-- blog.html 05:27  -->
+</html>
